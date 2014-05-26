@@ -9,14 +9,13 @@ MAINTAINER Devon Weller <dweller@atlasworks.com>
 ADD nginx-release.repo /etc/yum.repos.d/
 
 # install nginx and PHP packages
-RUN yum -y install nginx php55u php55u-mysqlnd php55u-devel php55u-gd php55u-pspell php55u-xml php55u-fpm python-pip
+RUN yum -y install nginx php55u php55u-devel php55u-mysqlnd php55u-gd php55u-pspell php55u-pecl-jsonc php55u-xml php55u-fpm python-pip
 
 # Add yum repo for MariaDB
 ADD mariadb.repo /etc/yum.repos.d/mariadb.repo
 
 # Install MariaDB client only
 RUN yum install -y MariaDB-client
-
 
 # install supervisord
 # RUN echo "NETWORKING=yes" > /etc/sysconfig/network
