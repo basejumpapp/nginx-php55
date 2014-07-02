@@ -29,6 +29,9 @@ ADD supervisord.conf /etc/
 RUN echo "" >> /etc/nginx/nginx.conf
 RUN echo "daemon off;" >> /etc/nginx/nginx.conf
 
+# add a default basejump user for access
+RUN useradd -u 1001 basejump
+
 # networking
 EXPOSE 80
 
