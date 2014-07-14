@@ -9,7 +9,7 @@ MAINTAINER Devon Weller <dweller@atlasworks.com>
 ADD nginx-release.repo /etc/yum.repos.d/
 
 # install nginx and PHP packages
-RUN yum -y install nginx php55u php55u-devel php55u-mysqlnd php55u-gd php55u-pspell php55u-pecl-jsonc php55u-xml php55u-fpm php55u-mbstring python-pip
+RUN yum -y install nginx php55u php55u-devel php55u-mysqlnd php55u-gd php55u-pspell php55u-pecl-jsonc php55u-xml php55u-fpm php55u-mbstring php55u-pecl-yaml python-pip
 
 # Add yum repo for MariaDB
 ADD mariadb.repo /etc/yum.repos.d/mariadb.repo
