@@ -34,6 +34,10 @@ RUN yum install -y MariaDB-client
 RUN yum -y install php55u-cli php55u-fpm php55u-devel php55u-mysqlnd php55u-pspell php55u-pecl-jsonc php55u-xml php55u-mbstring php55u-gd
 
 
+# Other packages (tar)
+RUN yum -y install tar
+
+
 # copy supervisord conf file
 ADD supervisord.conf /etc/
 
